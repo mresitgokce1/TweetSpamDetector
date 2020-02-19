@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Tweet Spam Detector",
+  "description": "Spamlı tweetleri gizle",
+  "version": "1.0",
+
+  "page_action": {
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
+  },
+  "background" : {
+    "scripts" : ["javascript.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "declarativeContent"
+  ],
+  "content_scripts": [
+   {
+     "matches": ["http://*.twitter.com/*","https://*.twitter.com/*"],
+     "js": ["jquery.js","myscript.js"]
+   }
+ ],
+  "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
+}

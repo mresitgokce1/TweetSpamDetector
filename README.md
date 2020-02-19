@@ -1,2 +1,1 @@
-# TweetSpamDetector
- 
+Google eklentisi geliştirildi, proje için jquery kullanıldı. Projenin amacı; küfür ve hakaret içerikli metinleri yıldızlı(**) göstermek.
